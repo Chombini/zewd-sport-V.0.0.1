@@ -1,5 +1,4 @@
 import BoxReveal from '@/components/magicui/box-reveal'
-import Image from 'next/image'
 import React from 'react'
 
 
@@ -8,7 +7,7 @@ import React from 'react'
 
 function Homeipage() {
   return (
-    <div className='col-span-2 ml-5 mr-4'>
+     <div className='col-span-2 ml-5 mr-4'>
         <div className='grid grid-cols-1 lg:grid-cols-2 lg:justify-between gap-2 mt-9'>
               <div className='hidden sm:flex h-40 md:h-80 w-full  flex-col justify-center lg:px-32 mt-10'>
                 <BoxReveal boxColor={"#31B65D"} duration={0.5}>

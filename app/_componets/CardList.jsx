@@ -1,4 +1,4 @@
-import { LoaderCircle, Trash, Trash2, TrashIcon, X } from 'lucide-react';
+import { LoaderCircle, Trash2 } from 'lucide-react';
 import Image from 'next/image'
 import React from 'react'
 

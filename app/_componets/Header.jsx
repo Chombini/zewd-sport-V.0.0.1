@@ -40,6 +40,8 @@ function Header() {
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
   const [isLoading2, setIsLoading2] = useState(false);
+  const [emailSupa, setEmailSupa] = useState(null);
+  const [passwordSupa, setPasswordSupa] = useState(null);
  
 
   
@@ -50,9 +52,8 @@ function Header() {
 
     useEffect(() => {
       getCartItems();
+      getData();
     }, [userEmail&&updateCart]);
-
-
 
     useEffect(()=>{
       let total = 0;
@@ -63,7 +64,27 @@ function Header() {
     },[data])
 
 
-
+const getData=async() =>{
+      try {
+        const { data, error } = await supabase
+          .from('adminUser')
+          .select('*')
+  
+        if (error) {
+          console.log(error.message);
+        } else {
+          setData(data);
+          setEmailSupa(data[0].email);
+          setPasswordSupa(data[0].password);
+        }
+      } catch (error) {
+          toast("Opps!! Something is wrong, Please Check your internet connection and try again",
+              {action: {
+              label: <CircleAlert className="text-red-700"/>,
+              }});
+        console.log('Unexpected error occurred.', error.message);
+      }
+    };
 
 const getCartItems=async() =>{
     try {
@@ -150,6 +171,10 @@ const handleDelete = async () => {
                       Login
                       </a>:""}
                 </li>
+                <li>
+                     {emailSupa === userEmail?
+                     <TranLink href="/dashboard" label="Dashboard"/>:""}
+                </li>
                </ul>
               </nav>
 
@@ -233,6 +258,8 @@ const handleDelete = async () => {
                                 <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("#about-Us")}>About-us 👍</Button>
                                 <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("#products")}>Products ⚽</Button>
                                 <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("#contact-us")}>Contact-us 📱</Button>
+                                {emailSupa === userEmail? <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("/dashboard")}>Dashboard</Button>:
+                                ""}
                             </div>
                       </SheetClose> 
                     </SheetHeader>

@@ -31,7 +31,7 @@ function Homeipage() {
                 <img alt='img' src="/file.png" className="w-full h-full bg-cover object-cover right-1 shadow-sm"/>
               </div>
 
-              <div className='sm:hidden flex h-40 md:h-80 w-full  flex-col justify-center lg:px-32 mt-6'>
+              {/* <div className='sm:hidden flex h-40 md:h-80 w-full  flex-col justify-center lg:px-32 mt-6'>
                 <BoxReveal boxColor={"#31B65D"} duration={0.5}>
                   <h1 className="text-4xl font-extrabold sm:text-5xl text-neutral-900">
                     Zewd-Sport
@@ -47,7 +47,7 @@ function Homeipage() {
                     and quests that unlock amazing discoveries! Join us!! 
                   </p>
                 </BoxReveal>
-              </div>
+              </div> */}
 
 {/* <div className='flex flex-row justify-between gap-3 items-center'>
         <div className='h-full w-[40%] bg-yellow-500'>

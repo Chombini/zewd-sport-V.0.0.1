@@ -2,11 +2,9 @@
 import { useState, useEffect } from 'react';
 import React from "react"
 import supabase from '@/supabaseConfig';
-// import { useUser } from '@clerk/nextjs';
 import { CircleAlert, CircleCheck, CircleCheckBig, LoaderCircle, MoreHorizontal, Trash2, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
-// import { Badge } from "@/components/ui/badge"
 import {
   Card,
   CardContent,
@@ -36,8 +34,6 @@ export default function Component() {
   const [data, setData] = useState([]);
   const [loding, setLoding] = useState(false);
   const [isLoading2, setIsLoading2] = useState(false);
-  // const { user } = useUser();
-  // const userEmail = user?.primaryEmailAddress?.emailAddress;
 
   useEffect(() => {
     getfetchData();

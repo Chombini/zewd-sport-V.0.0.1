@@ -17,14 +17,6 @@ import supabase from "@/supabaseConfig";
 import { useUser } from '@clerk/nextjs'
 import { CircleAlert, CircleCheck, LoaderCircle } from "lucide-react";
 import { toast } from "sonner";
-
-
-
-const adminCredentials = {
-  email: "admin@example.com",
-  password: "adminpassword",
-};
-
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -73,7 +65,6 @@ const handleSubmit = (e) => {
         label: <CircleCheck className="text-primary"/>,
       }})
     } else {
-    //   alert("Invalid credentials");
       toast("Opps!! Something is wrong, Please try again later",
         {action: {
         label: <CircleAlert className="text-red-700"/>,

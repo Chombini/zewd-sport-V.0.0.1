@@ -1,5 +1,4 @@
 "use client"
-
 import { animatePageIn } from "@/utils/animation";
 import Image from "next/image";
 import { useEffect } from "react";

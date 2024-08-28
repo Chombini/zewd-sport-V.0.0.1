@@ -1,6 +1,5 @@
 "use client"
 import Link from "next/link"
-// import { CircleUser, Menu, Package2, Search } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -10,20 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
-
-
-// import {
-//   DropdownMenu,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuLabel,
-//   DropdownMenuSeparator,
-//   DropdownMenuTrigger,
-// } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
-// import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-
 import React from 'react'
 import { Textarea } from "@/components/ui/textarea"
 
@@ -65,7 +51,6 @@ function page() {
                     <Input
                       placeholder="Your Email"
                       type="email"
-                     
                     />
                   </div>
 
@@ -97,7 +82,6 @@ function page() {
                     <h4>Title</h4>
                     <Input
                       placeholder="Your Title"
-                      // defaultValue="Zewd-Sport..."
                     />
                   </div>
 
@@ -113,11 +97,8 @@ function page() {
                   <h4>Sub-title</h4>
                   <Textarea
                     placeholder="Type Your Sub-title"
-                    // defaultValue="Zewd-Sport..."
                   />
-
                   </div>
-
                 </form>
               </CardContent>
               <CardFooter className="border-t px-6 py-4">

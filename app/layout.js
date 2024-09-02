@@ -1,5 +1,5 @@
 "use client";
-import { Poppins } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import {ClerkProvider} from '@clerk/nextjs'
 import { Toaster } from "@/components/ui/sonner"
@@ -9,7 +9,7 @@ import { useState } from "react";
 
 
 
-const inter = Poppins({ subsets: ["latin"], weight: ["300" , "700"] });
+const inter = Nunito_Sans({ subsets: ["latin"], weight: ["500" , "900"] });
 
 // export const metadata = {
 //   title: "Zewd-app",

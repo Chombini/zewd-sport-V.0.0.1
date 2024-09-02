@@ -60,10 +60,10 @@ const handleSubmit = (e) => {
     if (email === emailSupa && password === passwordSupa) {
       document.cookie = `authenticated=true; path=/`;
       router.push("/dashboard");
-      toast("Succsesfully Login!!",
-        {action: {
-        label: <CircleCheck className="text-primary"/>,
-      }})
+      // toast("Succsesfully Login!!",
+      //   {action: {
+      //   label: <CircleCheck className="text-primary"/>,
+      // }})
       setIsLoading2(false);
     } else {
       toast("Opps!! Something is wrong, Please try again.",

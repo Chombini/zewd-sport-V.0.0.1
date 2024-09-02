@@ -19,8 +19,6 @@ import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { Input } from '@/components/ui/input';
-import Link from 'next/link';
-
 import { motion } from "framer-motion";
 import TranLink from './TranLink';
 
@@ -47,8 +45,6 @@ function Header() {
   
 
 
-  // i need user name here!!
-// const userName = user?.primaryEmailAddress.userName;
 
     useEffect(() => {
       getCartItems();
@@ -142,6 +138,7 @@ const handleDelete = async () => {
     className="bg-neutral-900 w-full sticky top-0 z-[20]">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
+
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <a class="block" href="/">
                <Image src='/logo.png' alt="logo" width={70} height={70}/>
@@ -156,20 +153,17 @@ const handleDelete = async () => {
                  </li>
 
                 <li>
-                  <a className="text-gray-200 transition hover:text-gray-400/75" href="#products"> Products </a>
-                </li>
-
-                <li>
                   <a className="text-gray-200 transition hover:text-gray-400/75" href="#contact-us"> Contact-Us </a>
                 </li>
 
-                <li>{!user&&isLoaded?
+                <li>
+                  {!user&&isLoaded?
                       <a
                       className="rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white shadow"
                         href="/sign-up"
                       >
                       Login
-                      </a>:""}
+                    </a>:""}
                 </li>
                 <li>
                      {emailSupa === userEmail?
@@ -178,19 +172,23 @@ const handleDelete = async () => {
                </ul>
               </nav>
 
-            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2">
               <div className="flex sm:flex sm:gap-2">
-                <div className='gap-3 hidden md:flex'>
-                <form className="ml-auto flex-1 sm:flex-initial bg-transparent">
-                 <div className="relative">
-                  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                  <Input
-                      type="search"
-                      placeholder="Search products..."
-                      className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px] bg-transparent border border-gray-600 text-gray-100"/>
-                 </div>
-                </form> 
+
+           
+                  <div className='gap-3 hidden md:flex'>
+                    <form className="ml-auto flex-1 sm:flex-initial bg-transparent">
+                    <div className="relative">
+                      <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+                      <Input
+                          type="search"
+                          placeholder="Search products..."
+                          className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px] bg-transparent border border-gray-600 text-gray-100"/>
+                    </div>
+                    </form>  
                   </div> 
+            
+
                   {user?
 
                       <Sheet>
@@ -256,8 +254,8 @@ const handleDelete = async () => {
                       <SheetClose asChild>
                             <div className='w-[90%] bg-white flex gap-2 m-4 flex-col text-left'>
                                 <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("#about-Us")}>About-us 👍</Button>
-                                <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("#products")}>Products ⚽</Button>
                                 <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("#contact-us")}>Contact-us 📱</Button>
+                                {!user&&isLoaded?<Button className='p-3 text-white bg-primary rounded-md hover:bg-slate-200 hover:text-black' onClick={()=>router.push("/sign-up")}>Login</Button>:""}
                                 {emailSupa === userEmail? <Button className='p-3 text-black bg-slate-200 rounded-md hover:bg-primary hover:text-white' onClick={()=>router.push("/dashboard")}>Dashboard</Button>:
                                 ""}
                             </div>
@@ -270,8 +268,12 @@ const handleDelete = async () => {
             </div>
           </div>
         </div>
+        {/* <div className="hidden md:flex bg-neutral-950 w-full sticky top-0 z-[20] justify-center">
+        </div> */}
     </motion.header>
   )
 }
 
 export default Header
+
+

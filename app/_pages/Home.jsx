@@ -3,14 +3,13 @@ import React from 'react'
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 import Homeipage from '../_componets/Homeipage';
-import HomePage2 from '../_componets/HomePage2';
+// import HomePage2 from '../_componets/HomePage2';
 
 function HomePage() {
   return (
     <div className='w-100%'>
      <div className="relative flex h-full w-full flex-col items-center overflow-hidden bg-background">
       <Homeipage/>
-      {/* <HomePage2/> */}
        <GridPattern
          squares={[
            [4, 4],

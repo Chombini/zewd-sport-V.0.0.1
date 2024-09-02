@@ -88,13 +88,21 @@ const handleClick = async () => {
         {action: {
         label: <CircleAlert className="text-red-700"/>,
       }});
-    }finally {
+    } finally {
+        const { data, error } = await supabase
+          .from('cart')
+          .delete()
+          .eq('userEmail', userEmail)
+  
+        if (error) {
+          toast('Error deleting data');
+        }
       setIsLoading(false);
-      toast("Successfully You Ordered!, Coming soon👍",
+      toast("እባኮትን Telegram ላይ ያናግሩን!!👍",
         {action: {
         label: <CircleCheck className="text-primary"/>
       }}); 
-      router.push('/thank-you')
+      router.push('https://t.me/MoonglowHelpCenter')
     }
     
   };

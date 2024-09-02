@@ -1,10 +1,6 @@
 import BoxReveal from '@/components/magicui/box-reveal'
 import React from 'react'
 
-
-       
-     
-
 function Homeipage() {
   return (
      <div className='col-span-2 ml-5 mr-4'>

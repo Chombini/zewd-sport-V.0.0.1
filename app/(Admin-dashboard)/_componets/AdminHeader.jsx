@@ -38,6 +38,7 @@ function AdminHeader() {
       
   return (
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-white px-4 md:px-6">
+        
         <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
                 <Image src='/logo1.png' alt="logo" width={400} height={400}/>
@@ -75,6 +76,7 @@ function AdminHeader() {
                 Settings
             </Link>
         </nav>
+
         <Sheet>
         <SheetTrigger asChild>
             <Button
@@ -95,14 +97,14 @@ function AdminHeader() {
                 <Gauge className="mr-2"/>
                 Dashboard
             </Link>
-            <Link href="/user-order" className="flex items-center text-muted-foreground hover:text-foreground">
+            <Link href="/dashboard/user-order" className="flex items-center text-muted-foreground hover:text-foreground">
                 <ShoppingCart className="mr-2" />
                 Orders
                 <span className='w-6 h-6 text-sm ml-3 text-white font-semibold flex items-center justify-center bg-primary rounded-full'>
                    {count !== null ? count : 0}
                 </span>
             </Link>
-            <Link href="/products" className="flex text-muted-foreground hover:text-foreground">
+            <Link href="/dashboard/products" className="flex text-muted-foreground hover:text-foreground">
                 <Package className="mr-2" />
                 Products
             </Link>
@@ -110,13 +112,14 @@ function AdminHeader() {
                 <LineChart className="mr-2" />
                 Analytics
             </Link>
-            <Link href="/settings" className="flex text-muted-foreground hover:text-foreground">
+            <Link href="/dashboard/settings" className="flex text-muted-foreground hover:text-foreground">
                 <Settings className="mr-2" />
                 Settings
             </Link>
             </nav>
         </SheetContent>
         </Sheet>
+
         <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
         <form className="ml-auto flex-1 sm:flex-initial">
             <div className="relative">
@@ -147,6 +150,7 @@ function AdminHeader() {
             </DropdownMenuContent>
         </DropdownMenu> */}
         </div>
+
     </header>
   )
 }

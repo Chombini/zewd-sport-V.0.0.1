@@ -64,8 +64,9 @@ const handleSubmit = (e) => {
         {action: {
         label: <CircleCheck className="text-primary"/>,
       }})
+      setIsLoading2(false);
     } else {
-      toast("Opps!! Something is wrong, Please try again later",
+      toast("Opps!! Something is wrong, Please try again.",
         {action: {
         label: <CircleAlert className="text-red-700"/>,
         }});

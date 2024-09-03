@@ -141,7 +141,7 @@ const handleDelete = async () => {
 
             <div className="flex-1 md:flex md:items-center md:gap-12">
               <a class="block" href="/">
-               <Image src='/logo.png' alt="logo" width={70} height={70}/>
+               <Image src='/logo.png' alt="logo" width={50} height={50}/>
               </a>
             </div>         
 

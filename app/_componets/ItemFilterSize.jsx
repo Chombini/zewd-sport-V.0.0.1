@@ -32,7 +32,7 @@ function ItemFilterSize() {
     ];
   return (
     <div>
-       <h1 className='font-semibold'>Size</h1>
+       <h1 className='font-semibold p-1'>Size</h1>
        <div className='flex flex-wrap justify-center '>
        {filterOptions.map((item,index) => (
             <div key={index} className="flex gap-2 rounded-lg p-2 text-muted-foreground">

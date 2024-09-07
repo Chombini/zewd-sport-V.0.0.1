@@ -37,7 +37,7 @@ function ItemFilterColor() {
     ];
   return (
     <div>
-       <h1 className='font-semibold'>Colors</h1>
+       <h1 className='font-semibold p-2'>Colors</h1>
        <div className='flex flex-col justify-center items-center'>
         <div className='grid grid-cols-3'>
             {filterOptions.map((item,index) => (

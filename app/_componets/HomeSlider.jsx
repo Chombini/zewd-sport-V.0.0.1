@@ -47,7 +47,7 @@ function Carousel() {
       <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
         {slides.map((slide, index) => (
             <>
-                <div key={index} className="flex-shrink-0 w-full h-[400px] md:h-[500px] md:w-full">
+                <div key={index} className="relative flex-shrink-0 w-full h-[400px] md:h-[500px] md:w-full">
                     <img src={slide.image} alt={slide.title} className="w-full h-full object-cover"/>
                 </div>
                 <div className="absolute ml-4 top-44 z-15 flex items-center justify-start h-40 w-full opacity-50 hover:opacity-100">

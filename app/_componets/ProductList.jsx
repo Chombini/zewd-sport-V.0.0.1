@@ -71,77 +71,17 @@ function ProductList() {
               <CatagoryFilter selectedCategory={(catagory)=>filterProdacts(catagory)}/>
             <ChevronRight className='sm:hidden w-11 h-9 mt-2'/>
         </div>
-        
-          
         <Carousel/>
-
-        {/* <HomePage/> */}
-
-
-        <Card>
-            <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-
-              <div className="hidden border-r bg-muted/40 md:block w-60">
-
-                  <div className="flex h-full max-h-screen flex-col gap-2">
-
-                    <div className="flex h-14 items-center border-b py-3 px-4 lg:h-[60px] lg:px-6">
-                        <Link href="/" className="flex items-center gap-2 font-semibold">
-                        <Filter className="h-6 w-6" />
-                        <span>Filter</span>
-                        </Link>
-                    </div>
-
-                  <div className="flex-1">
-
-                      <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
-                        <ItemFilterColor/>
-                        <ItemFilterSize/>
-                        <ItemFilterStyle/>
-                      </nav>
-
-                  </div>
-
-                  </div>
-
-              </div>
-
-              <div className="flex flex-col">
-
-                  <header className="md:hidden flex h-14 items-center gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6">
-                    <Sheet>
-                        <SheetTrigger asChild>
-                        <Button
-                            variant="outline"
-                            className="shrink-0 md:hidden px-9 gap-2"
-                        >
-                            <SlidersHorizontal className="h-5 w-5" />
-                            <span className='font-bold'>Filter</span>
-                        </Button>
-                        </SheetTrigger>
-                        <SheetContent side="left" className="flex flex-col">
-                        <nav className="grid gap-2 text-lg font-medium overflow-scroll">
-                              <ItemFilterColor/>
-                              <ItemFilterSize/>
-                              <ItemFilterStyle/>
-                        </nav>
-                        </SheetContent>
-                    </Sheet>
-                  </header>
-
-                  <main className="grid grid-cols-2 gap-2 lg:gap-3 mt-5 md:grid-cols-3 lg:grid-cols-3 p-3">
-                    {data.map(product => (
-                        <ProdactItem product={product} id={product.id} key={product.id} />
-                      ))}
-                  </main>
-
-              </div>
-
-            </div>
-        </Card> 
+        <main className="grid grid-cols-2 gap-2 lg:gap-3 mt-5 md:grid-cols-4 lg:grid-cols-4 p-3">
+          {data.map(product => (
+              <ProdactItem product={product} id={product.id} key={product.id} />
+            ))}
+        </main>
     </>
   )
 }
+
+ 
 
 export default ProductList
 

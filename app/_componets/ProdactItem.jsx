@@ -29,7 +29,7 @@ function ProdactItem({product,id}) {
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>{product.catagory}</DialogTitle>
+              <DialogTitle>{product.name}</DialogTitle>
               <DialogDescription>
                 <ProdactDetail product={product}/>
               </DialogDescription>

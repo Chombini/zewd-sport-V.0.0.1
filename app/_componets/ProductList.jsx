@@ -5,7 +5,6 @@ import supabase from '@/supabaseConfig';
 import { useUser } from '@clerk/nextjs';
 import CatagoryFilter from '../_componets/CatagoryFilter'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-import Carousel from "./HomeSlider"
 import HomeSlider1 from './HomeSlider1';
 
 export const description =

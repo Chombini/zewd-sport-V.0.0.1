@@ -4,17 +4,9 @@ import ProdactItem from './ProdactItem'
 import supabase from '@/supabaseConfig';
 import { useUser } from '@clerk/nextjs';
 import CatagoryFilter from '../_componets/CatagoryFilter'
-import { ChevronLeft, ChevronRight, SlidersHorizontal } from 'lucide-react'
-import Link from "next/link"
-import { Filter } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import HomePage from '../_pages/Home';
-import ItemFilterColor from './ItemFilterColor';
-import ItemFilterSize from './ItemFilterSize';
-import ItemFilterStyle from './ItemFilterStyle';
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Carousel from "./HomeSlider"
+import HomeSlider1 from './HomeSlider1';
 
 export const description =
   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action."
@@ -71,7 +63,8 @@ function ProductList() {
               <CatagoryFilter selectedCategory={(catagory)=>filterProdacts(catagory)}/>
             <ChevronRight className='sm:hidden w-11 h-9 mt-2'/>
         </div>
-        <Carousel/>
+        {/* <Carousel/> */}
+        <HomeSlider1/>
         <main className="grid grid-cols-2 gap-2 lg:gap-3 mt-5 md:grid-cols-4 lg:grid-cols-4 p-3">
           {data.map(product => (
               <ProdactItem product={product} id={product.id} key={product.id} />

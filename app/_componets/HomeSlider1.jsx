@@ -53,7 +53,7 @@ const HomeSlider1 = () => {
             </div>
         <div className="absolute w-full h-full top-0 flex flex-col justify-center pl-10 sm:pl-16">
             <BoxReveal boxColor={"#31B65D"} duration={0.5}>
-              <h1 className="text-2xl font-extrabold sm:text-5xl text-neutral-900">
+              <h1 className="text-2xl font-extrabold sm:text-5xl text-green-500">
                   Zewd-Sport
                 <strong className="block font-extrabold text-green-100">
                   new mastery. ሁለም ድል!!

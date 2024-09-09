@@ -55,7 +55,7 @@ const HomeSlider1 = () => {
             <BoxReveal boxColor={"#31B65D"} duration={0.5}>
               <h1 className="text-2xl font-extrabold sm:text-5xl text-neutral-900">
                   Zewd-Sport
-                <strong className="block font-extrabold text-green-500">
+                <strong className="block font-extrabold text-green-100">
                   new mastery. ሁለም ድል!!
                 </strong>
               </h1>
